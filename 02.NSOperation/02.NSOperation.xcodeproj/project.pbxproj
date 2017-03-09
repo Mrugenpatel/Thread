@@ -21,6 +21,7 @@
 		0888255919076CF20012CD11 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0888253B19076CF10012CD11 /* UIKit.framework */; };
 		0888256119076CF20012CD11 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0888255F19076CF20012CD11 /* InfoPlist.strings */; };
 		0888256319076CF20012CD11 /* _2_NSOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0888256219076CF20012CD11 /* _2_NSOperationTests.m */; };
+		EB312AE61E719FDE005652B1 /* AROperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EB312AE51E719FDE005652B1 /* AROperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		0888255E19076CF20012CD11 /* 02.NSOperationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "02.NSOperationTests-Info.plist"; sourceTree = "<group>"; };
 		0888256019076CF20012CD11 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0888256219076CF20012CD11 /* _2_NSOperationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _2_NSOperationTests.m; sourceTree = "<group>"; };
+		EB312AE41E719FDE005652B1 /* AROperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AROperation.h; sourceTree = "<group>"; };
+		EB312AE51E719FDE005652B1 /* AROperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AROperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				0888253F19076CF10012CD11 /* 02.NSOperation-Info.plist */,
 				0888254019076CF20012CD11 /* InfoPlist.strings */,
 				0888254319076CF20012CD11 /* main.m */,
+				EB312AE41E719FDE005652B1 /* AROperation.h */,
+				EB312AE51E719FDE005652B1 /* AROperation.m */,
 				0888254519076CF20012CD11 /* 02.NSOperation-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB312AE61E719FDE005652B1 /* AROperation.m in Sources */,
 				0888254419076CF20012CD11 /* main.m in Sources */,
 				0888254E19076CF20012CD11 /* MJViewController.m in Sources */,
 				0888254819076CF20012CD11 /* MJAppDelegate.m in Sources */,
@@ -457,6 +463,7 @@
 				0888256819076CF20012CD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0888256919076CF20012CD11 /* Build configuration list for PBXNativeTarget "02.NSOperationTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +472,7 @@
 				0888256B19076CF20012CD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

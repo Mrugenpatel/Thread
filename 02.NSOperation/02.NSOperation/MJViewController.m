@@ -7,10 +7,13 @@
 //
 
 #import "MJViewController.h"
+#import "AROperation.h"
 
 @interface MJViewController ()
 
 @property (nonatomic, strong) NSOperationQueue *myQueue;
+
+@property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
@@ -20,9 +23,96 @@
 {
     [super viewDidLoad];
     
+    [self setImageView];
+    
     self.myQueue = [[NSOperationQueue alloc] init];
     
     [self demoOp2];
+    
+    
+    
+    
+    // 1) NSInvocationOperation用法
+    //1.封装操作
+    /*
+     第一个参数：目标对象
+     第二个参数：该操作要调用的方法，最多接受一个参数
+     第三个参数：调用方法传递的参数，如果方法不接受参数，那么该值传nil
+     */
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(run) object:nil];
+    
+    //2.启动操作
+    [operation start];
+    
+    
+    // 2) NSBlockOperation添加多个ExecutionBlock的用法
+    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"NSBlockOperation用法---%@", [NSThread currentThread]);
+    }];
+    [op start];
+    
+    
+    NSBlockOperation *multiOp = [NSBlockOperation blockOperationWithBlock:^{
+        NSLog(@"task0---%@", [NSThread currentThread]);
+    }];
+    
+    [multiOp addExecutionBlock:^{
+        NSLog(@"task1----%@", [NSThread currentThread]);
+    }];
+    
+    [multiOp addExecutionBlock:^{
+        NSLog(@"task2----%@", [NSThread currentThread]);
+    }];
+    
+    // 开始必须在添加其他操作之后
+    [multiOp start];
+    
+    
+    // 3) 自定义NSOperation
+    // 该操作被执行时就会执行op内部定义的任务
+    AROperation *customOperationOp = [[AROperation alloc] init];
+    [customOperationOp start];
+    
+    // 4) 设置设置任务的执行顺序
+    [self demoOp3];
+    
+    // 5) 线程间通信
+    // 有时我们在子线程中执行完一些操作的时候,需要回到主线程做一些事情(如进行UI操作),因此需要从当前线程回到主线程,以下载并显示图片为例,方法如下:
+    [self threadCommunication];
+}
+
+
+- (void)setImageView {
+    self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+    [self.view addSubview:self.imageView];
+}
+
+- (void)threadCommunication {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    // 子线程下载图片
+    [queue addOperationWithBlock:^{
+        NSURL *url = [NSURL URLWithString:@"https://ss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1598552568,4236159349&fm=58"];
+        //NSData *data = [NSData dataWithContentsOfURL:url];
+
+        NSError* error = nil;
+        NSData* data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
+        if (error) {
+            NSLog(@"%@", [error localizedDescription]);
+        } else {
+            NSLog(@"Data has loaded successfully.");
+        }
+        
+        
+        UIImage *image = [[UIImage alloc] initWithData:data];
+        // 回到主线程进行显示
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            self.imageView.image = image;
+        }];
+    }];
+}
+
+- (void)run {
+    NSLog(@"执行操作...");
 }
 
 - (void)demoOp:(id)obj
