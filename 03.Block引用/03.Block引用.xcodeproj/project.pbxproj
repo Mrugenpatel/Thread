@@ -205,6 +205,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = itcast;
 				TargetAttributes = {
+					088825B5190791270012CD11 = {
+						DevelopmentTeam = VD58PNDPW6;
+					};
 					088825D6190791270012CD11 = {
 						TestTargetID = 088825B5190791270012CD11;
 					};
@@ -340,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -372,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -383,9 +386,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VD58PNDPW6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "03.Block引用/03.Block引用-Prefix.pch";
 				INFOPLIST_FILE = "03.Block引用/03.Block引用-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,9 +402,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VD58PNDPW6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "03.Block引用/03.Block引用-Prefix.pch";
 				INFOPLIST_FILE = "03.Block引用/03.Block引用-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -463,6 +472,7 @@
 				088825EA190791270012CD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		088825EB190791270012CD11 /* Build configuration list for PBXNativeTarget "03.Block引用Tests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +481,7 @@
 				088825ED190791270012CD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

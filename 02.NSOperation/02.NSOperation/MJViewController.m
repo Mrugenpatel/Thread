@@ -27,6 +27,8 @@
     
     self.myQueue = [[NSOperationQueue alloc] init];
     
+    [self demoOp1];
+    
     [self demoOp2];
     
     
