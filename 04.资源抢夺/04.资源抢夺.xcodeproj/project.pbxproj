@@ -200,6 +200,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = itcast;
 				TargetAttributes = {
+					088825F9190796A30012CD11 = {
+						DevelopmentTeam = VD58PNDPW6;
+					};
 					0888261A190796A40012CD11 = {
 						TestTargetID = 088825F9190796A30012CD11;
 					};
@@ -377,9 +380,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VD58PNDPW6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "04.资源抢夺/04.资源抢夺-Prefix.pch";
 				INFOPLIST_FILE = "04.资源抢夺/04.资源抢夺-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -390,9 +395,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = VD58PNDPW6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "04.资源抢夺/04.资源抢夺-Prefix.pch";
 				INFOPLIST_FILE = "04.资源抢夺/04.资源抢夺-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ylgwhyh.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -457,6 +464,7 @@
 				0888262E190796A40012CD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0888262F190796A40012CD11 /* Build configuration list for PBXNativeTarget "04.资源抢夺Tests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +473,7 @@
 				08882631190796A40012CD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
